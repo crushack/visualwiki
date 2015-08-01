@@ -106,7 +106,7 @@
       var searchBox_to   = new google.maps.places.SearchBox(input_to);
       
       google.maps.event.addListener( searchBox_from, 'places_changed', function() {
-        var places = searchBox.getPlaces();
+        var places = searchBox_from.getPlaces();
 
         if ( places.length == 0 ) return;
 
@@ -149,8 +149,8 @@
 </head>
 
 <body>
-  <input id="from-input" class="controls" type="text" placeholder="Search Box">
-  <input id="to-input" class="controls" type="text" placeholder="Search Box">
+  <input id="from-input" class="controls" type="text" placeholder="Source">
+  <input id="to-input" class="controls" type="text" placeholder="Destination">
   <div id="map-canvas"></div>
 </body>
 
